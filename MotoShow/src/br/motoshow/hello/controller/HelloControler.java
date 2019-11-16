@@ -1,4 +1,4 @@
-package br.unitins.hello.controller;
+package br.motoshow.hello.controller;
 
 import java.io.Serializable;
 

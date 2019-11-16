@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<ui:composition template="template.xhtml">
+	<ui:define name="conteudo">
+
+		<div class="navbar navbar-inverse">
+			<h:messages style="color:red" />
+			<h:messages id="messages" style="color:red" globalOnly="false" />
+			<div class="navbar-brand" style="width: 100%; text-align: center;">Cadastro
+				de Moto</div>
+		</div>
+
+		<div class="row" align="center">
+			<div class="col-xs-12 col-xs-updated">
+				<h:form styleClass="form-horizontal">
+
+					<br />
+					<br />
+
+					<h:form>
+						<h:panelGrid id="panelForm" columns="2">
+
+							<h:outputLabel value="Cilindrada: " />
+							<h:selectOneMenu styleClass="form-control"
+								value="#{motoController.moto.cilindrada}">
+								<f:selectItem itemLabel="Selecione ..." />
+								<f:selectItems value="#{motoController.listaCilindradas}"
+									var="Cilindrada" itemLabel="#{cilindrada.label}"
+									itemValue="#{cilindrada}" />
+							</h:selectOneMenu>
+
+							<h:outputLabel value="Modelo: " />
+							<h:selectOneMenu styleClass="form-control"
+								value="#{motoController.moto.modelo}">
+								<f:selectItem itemLabel="Selecione ..." />
+								<f:selectItems value="#{motoController.listaModelo}"
+									var="modelo" itemLabel="#{modelo.label}" itemValue="#{modelo}" />
+							</h:selectOneMenu>
+
+							<h:outputLabel value="Marca: " />
+							<h:selectOneMenu styleClass="form-control"
+								value="#{motoController.moto.marca}">
+								<f:selectItem itemLabel="Selecione ..." />
+								<f:selectItems value="#{motoController.listaMarca}" var="marca"
+									itemLabel="#{marca.label}" itemValue="#{marca}" />
+							</h:selectOneMenu>
+
+							<h:outputLabel value="Categoria: " />
+							<h:selectOneMenu styleClass="form-control"
+								value="#{motoController.moto.categoria}">
+								<f:selectItem itemLabel="Selecione ..." />
+								<f:selectItems value="#{motoController.listaCategoria}"
+									var="categoria" itemLabel="#{categoria.label}"
+									itemValue="#{categoria}" />
+							</h:selectOneMenu>
+
+							<h:outputLabel value="Nome: " />
+							<h:inputText styleClass="form-control"
+								value="#{motoController.moto.nome}" />
+
+							<h:outputLabel value="CPF: " />
+							<h:inputText styleClass="form-control"
+								value="#{motoController.moto.cpf}" />
+
+							<h:outputLabel value="Email: " />
+							<h:inputText styleClass="form-control"
+								value="#{motoController.moto.email}" />
+
+
+
+						</h:panelGrid>
+						<br />
+						<br />
+
+						<h:panelGrid columns="4">
+							<h:commandButton styleClass="btn btn-success" value="Incluir"
+								disabled="#{motoController.moto.id!= null}"
+								actionListener="#{motoController.incluir}" />
+
+							<h:commandButton styleClass="btn btn-primary" value="Alterar"
+								disabled="#{motoController.moto.id == null}"
+								actionListener="#{motoController.alterar}" />
+
+							<h:commandButton class="btn btn-danger" value="Excluir"
+								disabled="#{motoController.moto.id == null}"
+								actionListener="#{motoController.excluir}" />
+
+							<h:commandButton class="btn btn-warning" value="Limpar"
+								actionListener="#{motoController.limpar}" />
+
+						</h:panelGrid>
+						<br />
+						<h:commandButton value="Voltar"
+							onclick="history.go(-1); return false;"
+							styleClass="col-md-2 mb-3 btn btn-default form-control" />
+					</h:form>
+				</h:form>
+			</div>
+		</div>
+
+	</ui:define>
+</ui:composition>
+
+</html>
