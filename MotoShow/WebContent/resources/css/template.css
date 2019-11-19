@@ -8,20 +8,40 @@ nav {
 	width: 100%;
 	background: #018eca;
 	overflow: auto;
-	margin-top: 20px;
+	heigth:30px;
+}
+
+.sair{
+	float:right;
+	position:relative;
+	display:block;
+	background-color:none;
+	margin-right:20px;
+	margin-top:20px;
+	
+}
+.sair a:HOVER{
+	text-decoration:underline;
+	background-color:none !important;
 }
 
 ul {
 	padding: 0;
-	margin: 0 0 0 50px;
 	list-style: none;
+	margin-top:10px;
+}
+
+.userNome{
+	margin-top:18px;
+	position:absolute;
+	display:block;
 }
 
 li {
 	float: left;
 }
 
-nav a {
+nav ul li a {
 	width: 100px;
 	display: block;
 	padding: 20px 15px;
@@ -29,12 +49,16 @@ nav a {
 	font-family: Arial;
 	color: #f5f5f5;
 	text-align: center;
+	text-transform: UPPERCASE;
+	width:160px;
+	font-size:13px;
 }
 
-nav a:hover {
-	background: #007aff;
-	text-transform: capitalize;
-	transition: 0.5s;
+nav ul li a:hover {
+	background: #FFF;
+	color:#018eca !important;
+	transition: 0.2s;
+	text-decoration: none;
 }
 .addUser{
 	padding: 0 0 0 15px;
@@ -82,4 +106,12 @@ width: 100%;
 	border-left: 0px;
 	border-right: 0px;
 	border-bottom: 0px;
+}
+.main {
+	float: left;
+	width: 79%;
+	height: 690px;
+	background-color: rgb(255,255,255);
+	position: relative;
+	font-family: helvetica,verdana,sans-serif;
 }

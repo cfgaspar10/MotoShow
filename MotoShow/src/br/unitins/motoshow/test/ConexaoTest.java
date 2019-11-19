@@ -33,7 +33,7 @@ public class ConexaoTest {
 		
 		try {
 			Statement stat =  conn.createStatement();
-			stat.execute("INSERT INTO bike (tamAro, categoria, modelo, marca) "
+			stat.execute("INSERT INTO moto (cilindrada, categoria, modelo, marca) "
 					+ "				 VALUES ('2', 2, '2', 2)");
 			conn.close();
 			

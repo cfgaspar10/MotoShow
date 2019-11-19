@@ -101,7 +101,7 @@ public class ProdutoDAO extends DAO<Produto>  {
 			stat.setInt(1, id);
 			
 			stat.execute();
-			Util.addMessageError("Exclus�o realizada com sucesso!");
+			Util.addMessageError("Exclusao realizada com sucesso!");
 			resultado = true;
 		} catch (SQLException e) {
 			Util.addMessageError("Falha ao Excluir.");
