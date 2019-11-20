@@ -6,9 +6,11 @@ public enum Cilindrada {
 	C100(2,"100 Cilindradas"),
 	C110(3,"110 Cilindradas"),
 	C125(4,"125 Cilindradas"),
-	C3OO(5,"300 Cilindradas"),
-	C600(6,"600 Cilindradas"),
-	C1000(7,"1000 Cilindradas");
+	C150(5,"150 Cilindradas"),
+	C160(6,"160 Cilindradas"),
+	C3OO(7,"300 Cilindradas"),
+	C600(8,"600 Cilindradas"),
+	C1000(9,"1000 Cilindradas");
 
 	
 	private int value;

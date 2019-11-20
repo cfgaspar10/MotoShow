@@ -8,8 +8,6 @@
 	<ui:define name="conteudo">
 
 		<div class="navbar navbar-inverse">
-			<h:messages style="color:red" />
-			<h:messages id="messages" style="color:red" globalOnly="false" />
 			<div class="navbar-brand" style="width: 100%; text-align: center;">Cadastro
 				de Moto</div>
 		</div>
@@ -22,6 +20,8 @@
 					<br />
 
 					<h:form>
+					<h:messages id="messages" infoStyle="color:green"
+						warnStyle="color:orange" errorStyle="color:red" globalOnly="false" />
 						<h:panelGrid id="panelForm" columns="2">
 
 							<h:outputLabel value="Cilindrada: " />
