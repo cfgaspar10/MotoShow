@@ -36,7 +36,7 @@ public class CarrinhoController implements Serializable {
 		// atualiza o carrinho
 		Session.getInstance().setAttribute("carrinho", carrinho);
 
-		Util.addMessageError("Item removido com Sucesso! ");
+		Util.addMessageInfo("Item removido com Sucesso! ");
 	}
 
 	public void finalizar() {
@@ -47,7 +47,7 @@ public class CarrinhoController implements Serializable {
 		dao.create(getVenda());
 		// atualiza o carrinho
 		AtualiaCarrinho();
-		Util.addMessageError("Venda realizada com sucesso!");
+		Util.addMessageInfo("Item removido com Sucesso! ");
 
 	}
 
@@ -110,7 +110,7 @@ public class CarrinhoController implements Serializable {
 		// atualiza o carrinho
 		Session.getInstance().setAttribute("carrinho", carrinho);
 
-		Util.addMessageError("Adicionado com Sucesso! ");
+		Util.addMessageInfo("Item removido com Sucesso! ");
 	}
 
 }

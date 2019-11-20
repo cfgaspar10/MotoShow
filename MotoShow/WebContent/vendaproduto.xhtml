@@ -13,7 +13,8 @@
 					Venda</div>
 			</div>
 			<h:form>
-				<h:messages style="color:red" />
+				<h:messages id="messages" infoStyle="color:green"
+						warnStyle="color:orange" errorStyle="color:red" globalOnly="false" />
 				<h:panelGrid id="panelForm" columns="3">
 
 					<h:outputLabel value="Descrição do Produto: " />
@@ -52,7 +53,6 @@
 						</h:commandButton>
 					</h:column>
 				</h:dataTable>
-				<h:messages style="color:red" />
 
 			</h:form>
 		

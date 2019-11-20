@@ -15,41 +15,39 @@ public class Util {
 
 	public static void main(String[] args) {
 		// na tela de usuario (crud)
-		// 		usuario.setSenha(Util.encrypt(usuario.getSenha()));
-		
+		// usuario.setSenha(Util.encrypt(usuario.getSenha()));
+
 		// TELA DE LOGIN
-		// 
-		
+		//
+
 		System.out.println(Util.encryptByApache("gaspar"));
 		System.out.println(Util.encrypt("123456"));
 	}
-	
+
 	public static String encryptByApache(String value) {
 		return DigestUtils.sha256Hex(value);
 	}
-	
-	
+
 	public static String encrypt(String value) {
 		try {
 			// Classe usilizada para gerar a criptografia em hash
 			MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
 			byte[] bytes = messageDigest.digest(value.getBytes());
-			
+
 			// convertendo um array de bytes em hexadecimal
 			StringBuilder stringBuilder = new StringBuilder();
 			for (byte b : bytes) {
 				stringBuilder.append(String.format("%02X", 0xFF & b));
 			}
-			
+
 			return stringBuilder.toString();
-			
+
 		} catch (NoSuchAlgorithmException e) {
 			e.printStackTrace();
 		}
-		
+
 		return null;
 	}
-	
 
 	public static void redirect(String url) {
 		try {
@@ -59,26 +57,34 @@ public class Util {
 			e.printStackTrace();
 		}
 	}
-	
-	public static void redirect2(String url) {
-		HttpServletResponse response = (HttpServletResponse) FacesContext.getCurrentInstance().getExternalContext().getResponse();
-        try {
-           response.sendRedirect(url);
-           FacesContext.getCurrentInstance().responseComplete();
-        }
 
-        catch (Exception ex) {
-            ex.printStackTrace();
-        }
+	public static void redirect2(String url) {
+		HttpServletResponse response = (HttpServletResponse) FacesContext.getCurrentInstance().getExternalContext()
+				.getResponse();
+		try {
+			response.sendRedirect(url);
+			FacesContext.getCurrentInstance().responseComplete();
+		}
+
+		catch (Exception ex) {
+			ex.printStackTrace();
+		}
 	}
-	
 
 	public static void addMessageError(String message) {
 		FacesContext.getCurrentInstance().addMessage("", new FacesMessage(message));
 	}
 
+	public static void addMessageInfo(String message) {
+		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
+	}
+
+	public static void addMessageWarn(String message) {
+		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, message, null));
+	}
+
 	public static boolean cpfValido(String cpf) {
-		
+
 		cpf = cpf.replace(".", "");
 		cpf = cpf.replace("-", "");
 

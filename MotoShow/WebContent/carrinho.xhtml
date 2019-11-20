@@ -7,15 +7,14 @@
 <ui:composition template="template.xhtml">
 	<ui:define name="conteudo">
 		<div class="navbar navbar-inverse">
-			<h:messages style="color:red" />
-			<h:messages id="messages" style="color:red" globalOnly="false" />
 			<div class="navbar-brand" style="width: 100%; text-align: center;">Carrinho</div>
 		</div>
 
 		<div class="row" align="center">
 			<div class="col-xs-12 col-xs-updated">
 				<h:form styleClass="form-horizontal">
-
+					<h:messages id="messages" infoStyle="color:green"
+						warnStyle="color:orange" errorStyle="color:red" globalOnly="false" />
 					<br />
 					<br />
 
@@ -51,7 +50,6 @@
 						actionListener="#{carrinhoController.finalizar}">
 					</h:commandButton>
 
-					<h:messages style="color:red" />
 				</h:form>
 			</div>
 		</div>

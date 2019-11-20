@@ -23,7 +23,7 @@
 			
 				<li>
 					<h:form>
-						<h:commandLink value="Cadastrar Moto"
+						<h:commandLink value="Cadastro Moto"
 							action="#{templateController.redirecionar('/MotoShow/faces/moto.xhtml')}" />
 					</h:form>
 				</li>
@@ -32,12 +32,12 @@
 				<h:form
 						rendered="#{templateController.usuarioLogado.perfil.value == 1 || templateController.usuarioLogado.perfil.value == 2}">
 
-						<h:commandLink value="Cadastrar Peça"
+						<h:commandLink value="Cadastro Peça"
 							action="#{templateController.redirecionar('/MotoShow/faces/produto.xhtml')}" />
 					</h:form></li>
 
 				<li><h:form>
-						<h:commandLink value="Realizar Venda"
+						<h:commandLink value="Vendas Peças"
 							action="#{templateController.redirecionar('/MotoShow/faces/vendaproduto.xhtml')}" />
 					</h:form></li>
 
@@ -55,19 +55,19 @@
 				<li><h:form
 						rendered="#{templateController.usuarioLogado.perfil.value == 1 || templateController.usuarioLogado.perfil.value == 2}">
 
-						<h:commandLink value="Consultar Usuário"
+						<h:commandLink value="Consulta Usuário"
 							action="#{templateController.redirecionar('/MotoShow/faces/consultausuario.xhtml')}" />
 					</h:form></li>
 
 
 				<li><h:form>
-						<h:commandLink value="Consultar Moto"
+						<h:commandLink value="Consulta Moto"
 							action="#{templateController.redirecionar('/MotoShow/faces/consultarMoto.xhtml')}" />
 					</h:form></li>
 
 
 				<li><h:form>
-						<h:commandLink value="Consultar Peça"
+						<h:commandLink value="Consulta Peça"
 							action="#{templateController.redirecionar('/MotoShow/faces/consultarProduto.xhtml')}" />
 					</h:form></li>
 
@@ -77,8 +77,9 @@
 					</h:form></li>
 			</ul>
 			<h:form class="sair">
-				<h:commandLink value="Sair"
-					action="#{templateController.encerrarSessao}" style="color:white" />
+				<h:outputLink value="login.xhtml">
+					<h:graphicImage library="imagens" name="sair-ms.png" style="height:25px;margin-right:5px; margin-bottom:5px;"/>
+				</h:outputLink>
 				</h:form>
 		</nav>
 	</div>

@@ -1,8 +1,11 @@
 package br.unitins.motoshow.model;
 
+import javax.validation.constraints.NotEmpty;
+
 public class Produto {
 
 	private Integer id;
+	@NotEmpty(message = "O campo nome nao pode ser vazio")
 	private String descricao;
 	private Double valor;
 	private Integer quantidade;

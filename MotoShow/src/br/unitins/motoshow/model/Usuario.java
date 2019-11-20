@@ -17,7 +17,7 @@ public class Usuario {
 	@Email(message = "Email invalido.")
 	private String login;
 
-	@Size(min = 6, max = 20, message = "Tamanho incompativel, valor m�nimo: 6 e valor maximo:20.")
+	@Size(min = 6, max = 20, message = "Tamanho incompativel, valor manimo: 6 e valor maximo:20.")
 	private String senha;
 	private Perfil perfil;
 	private LocalDate dataNascimento;
