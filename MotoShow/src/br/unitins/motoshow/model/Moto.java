@@ -39,7 +39,7 @@ public class Moto {
 		this.email = email;
 	}
 
-	@Email(message = "Email inv�lido.")
+	@Email(message = "Email invalido.")
 	private String email;
 
 	public Integer getId() {

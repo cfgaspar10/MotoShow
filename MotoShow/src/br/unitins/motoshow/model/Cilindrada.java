@@ -27,7 +27,7 @@ public enum Cilindrada {
 		return label;
 	}
 	
-	// retorna um tamanhoAro a partir de um valor inteiro
+	// retorna uma cilindrada a partir de um valor inteiro
 	public static Cilindrada valueOf(int value) {
 		for (Cilindrada cilindrada : Cilindrada.values()) {
 			if (cilindrada.getValue() == value) {

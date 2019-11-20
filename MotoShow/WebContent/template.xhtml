@@ -14,23 +14,22 @@
 
 	<div class="wrapper">
 		<nav>
+			<h:form class="logo">	
+				<h:outputLink value="template.xhtml">
+					<h:graphicImage library="imagens" name='logo-ms.png' style="height:55px;margin-left:5px; margin-bottom:10px;"/>
+				</h:outputLink>
+			</h:form>
 			<ul>
-
-				<li><h:graphicImage library="imagens" name='logo.png' style="width:80%; "/></li>
 			
-
-				<li><h:form>
-						<h:commandLink value="Inicio"
-							action="#{templateController.redirecionar('/MotoShow/faces/template.xhtml')}" />
-					</h:form></li>
-
-
-				<li><h:form>
+				<li>
+					<h:form>
 						<h:commandLink value="Cadastrar Moto"
 							action="#{templateController.redirecionar('/MotoShow/faces/moto.xhtml')}" />
-					</h:form></li>
+					</h:form>
+				</li>
+				<li>
 
-				<li><h:form
+				<h:form
 						rendered="#{templateController.usuarioLogado.perfil.value == 1 || templateController.usuarioLogado.perfil.value == 2}">
 
 						<h:commandLink value="Cadastrar Peça"
@@ -86,7 +85,7 @@
 	<div class="box content">
 		<br />
 		<ui:insert name="conteudo">
-			<h:graphicImage library="imagens" name='perfil_moto.jpg' style="width:100%; " />
+			<h:graphicImage library="imagens" name='baner.png' style="width:100%; " />
 			
 			
 		</ui:insert>

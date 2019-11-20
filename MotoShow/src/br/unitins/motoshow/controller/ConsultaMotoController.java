@@ -21,7 +21,7 @@ public class ConsultaMotoController implements Serializable {
 	private static final long serialVersionUID = -2937253840273075645L;
 	
 	private Moto moto;
-	private String nome;
+	//private String nome;
 
 	int id;
 
@@ -31,6 +31,7 @@ public class ConsultaMotoController implements Serializable {
 		if (listaMoto == null) {
 			MotoDAO dao = new MotoDAO();
 			listaMoto = (List<Moto>) dao.findById(id);
+			//listaMoto = (List<Moto>) dao.findById(id);
 			if (listaMoto == null)
 				listaMoto = new ArrayList<Moto>();
 			dao.closeConnection();
@@ -85,7 +86,7 @@ public class ConsultaMotoController implements Serializable {
 		return moto;
 	}
 
-	public void setBike(Moto moto) {
+	public void setMoto(Moto moto) {
 		this.moto = moto;
 	}
 
